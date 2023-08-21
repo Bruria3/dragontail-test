@@ -1,0 +1,73 @@
+{
+    "totalAmount": 20,
+    "orders": [
+        {
+            "id": 984678,
+            "name": "Sushi",
+            "type": "cheese",
+            "description": "Finest fish and veggies",
+            "price": 22.99,
+            "ingredients": [
+                "cheeze",
+                "olive",
+                "corn"
+            ],
+            "userDetails": {
+                "name": "Moshe",
+                "address": "Jerusalem"
+            },
+            "items": 3
+        },
+        {
+            "id": 984690,
+            "type": "pepperoni",
+            "name": "Schnitzel",
+            "description": "A german specialty!",
+            "price": 16.5,
+            "ingredients": [
+                "cheeze",
+                "olive",
+                "more"
+            ],
+            "userDetails": {
+                "name": "David",
+                "address": "Jerusalem"
+            },
+            "items": 3
+        },
+        {
+            "id": 984632,
+            "type": "vegetarian",
+            "name": "Barbecue Burger",
+            "description": "American, raw, meaty",
+            "price": 12.99,
+            "ingredients": [
+                "cheeze",
+                "olive",
+                "lettuce"
+            ],
+            "userDetails": {
+                "name": "Sara",
+                "address": "Jerusalem"
+            },
+            "items": 3
+        },
+        {
+            "id": 984664,
+            "type": "supreme",
+            "name": "Green Bowl",
+            "description": "Healthy...and green...",
+            "price": 18.99,
+            "ingredients": [
+                "cheeze",
+                "olive",
+                "mushrooms"
+            ],
+            "userDetails": {
+                "name": "Yael",
+                "address": "Jerusalem"
+            },
+            "items": 2
+        }
+    ]
+}

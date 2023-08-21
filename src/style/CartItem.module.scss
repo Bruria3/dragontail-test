@@ -1,0 +1,67 @@
+@import "_variables";
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid $red;
+  padding: 1rem 0;
+  margin: 1rem 0;
+
+  .h2 {
+    margin: 0 0 0.5rem 0;
+    color: #363636;
+  }
+
+  .button {
+    font: inherit;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: $red;
+    border: 1px solid $red;
+    width: 3rem;
+    text-align: center;
+    border-radius: 6px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin: 0.25rem;
+
+    &:active,
+    &:hover {
+      background-color: $red;
+      color: $white;
+    }
+  }
+}
+
+.summary {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: bold;
+  color: $red;
+}
+
+.amount {
+  font-weight: bold;
+  border: 1px solid $white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  color: $grey;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .actions {
+    flex-direction: row;
+  }
+}
