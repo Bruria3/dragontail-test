@@ -39,7 +39,7 @@ export const orderSlice = createSlice({
   extraReducers: (builder: any) => {
     // The `builder` callback form is used here because it provides correctly typed reducers from the action creators
     builder
-      .addCase(fetchOrders.fulfilled, (state: OrderState, action: any) => {
+      .addCase(fetchOrders.fulfilled, (state: OrderState, action: PayloadAction<OrderState>) => {
         state.orders = action.payload.orders;
         state.totalAmount = action.payload.totalAmount;
         state.status = APIStatus.FULFILLED

@@ -1,5 +1,5 @@
-import axios, { AxiosResponse } from "axios";
-import { APIError } from "./types";
+import axios, { AxiosResponse, AxiosInstance } from "axios";
+import { APIError, AxiosConfig } from "./types";
 
 export const InternalError = {
     message: 'Internal errror during request',
@@ -29,8 +29,9 @@ export const getExceptionPayload = (ex: unknown): APIError => {
 export const onFulfilledRequest = (response: AxiosResponse) => response;
 export const onRejectedResponse = (error: any): any => Promise.reject(InternalError);
 
-export const publicRequest = axios.create({
-    baseURL: 'data'
-});
+const config: AxiosConfig = {
+    baseURL: "data"
+};
+export const publicRequest: AxiosInstance = axios.create(config) as AxiosInstance;
 
 publicRequest.interceptors.response.use(onFulfilledRequest, onRejectedResponse);

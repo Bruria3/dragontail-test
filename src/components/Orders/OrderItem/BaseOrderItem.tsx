@@ -61,7 +61,7 @@ const OrderItem: React.FC<BaseOrderProps> = (props: any) => {
           <Pizza {...order} />
           <UserDetails {...order.userDetails} />
           <Typography>Price: {formattedPrice}</Typography>
-          <Typography>No of items to prepare: {order.items}</Typography>
+          <Typography>Number of items to prepare: {order.items}</Typography>
         </CardContent>
         <CardActions>
           <Button size="small" onClick={moveOrderHandler}>Order is ready!</Button>
