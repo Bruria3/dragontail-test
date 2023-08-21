@@ -17,9 +17,6 @@ export const commonSlice = createSlice({
     reducers: {
         setSuccessNotification: (state: CommonState, action: PayloadAction<string>) => {
             state.successMessage = action.payload
-            setTimeout(() => {
-                state.successMessage = '';
-            }, 5000);
         }
     }
 });

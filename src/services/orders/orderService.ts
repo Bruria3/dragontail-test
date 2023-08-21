@@ -26,6 +26,9 @@ export const moveOrder = createAsyncThunk(
         try {
             // await publicRequest.post<OrderState>('orders', order);
             dispatch(setSuccessNotification('Order moved successfully!'));
+            setTimeout(() => {
+                dispatch(setSuccessNotification(''));
+            }, 3000);
             return order;
         }
         catch(err)  {

@@ -7,8 +7,7 @@ import Alert from '@mui/material/Alert';
 
 const App = () => {
   const dispatch = useAppDispatch();
-  const notification = useAppSelector((state: any) => state.common && state.common.successMessage);
-  console.log(notification);
+  const notification = useAppSelector((state: any) => state.common.successMessage);
 
   useEffect(() => {
     dispatch(fetchOrders());
@@ -16,9 +15,13 @@ const App = () => {
 
   return (
     <>
+      {notification && (
+        <Alert style={{ width: "50%", margin: "100px", position: "fixed", zIndex: "99" }} severity="success">
+          {notification}
+        </Alert>
+      )}
       <Header />
       <Orders />
-      {notification && <Alert severity="success">{notification}</Alert>}
     </>
   );
 };

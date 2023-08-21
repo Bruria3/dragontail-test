@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import orderReducer from "./orders/orderSlice";
-import commonReducer from "./orders/orderSlice";
+import commonReducer from "./common/commonSlice";
 
 export const store = configureStore({
   reducer: {
